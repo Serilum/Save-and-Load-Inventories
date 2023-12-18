@@ -1,14 +1,14 @@
 modLoader="javafml"
 loaderVersion="*"
 license="All rights reserved"
-issueTrackerURL="https://github.com/ricksouth/serilum-mc-mods/labels/Mod:%20Save%20and%20Load%20Inventories"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Save%20and%20Load%20Inventories"
 logoFile="icon.png"
 
 [[mods]]
 modId="saveandloadinventories"
-version="3.1"
+version="3.2"
 displayName="Save and Load Inventories"
-displayURL="https://curseforge.com/minecraft/mc-mods/save-and-load-inventories"
+displayURL="https://serilum.com/mod/save-and-load-inventories"
 authors="Rick South"
 description='''Easily save and load inventories by using commands.
 '''
@@ -21,13 +21,15 @@ If you would like to contribute too, check out https://ricksouth.com/donate. App
 
 [[dependencies.saveandloadinventories]]
     modId="collective"
+    type="required"
     mandatory=true
-    versionRange="[7.13,)"
+    versionRange="[7.21,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.saveandloadinventories]]
     modId="minecraft"
+    type="required"
     mandatory=true
     versionRange="[1.20.4]"
     ordering="NONE"
