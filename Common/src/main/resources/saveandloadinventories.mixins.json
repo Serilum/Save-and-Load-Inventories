@@ -1,9 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.saveandloadinventories.forge.mixin",
+  "package": "com.natamus.saveandloadinventories.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "saveandloadinventories_forge.refmap.json",
   "mixins": [
 
   ],
