@@ -5,7 +5,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.natamus.collective.functions.PlayerFunctions;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.saveandloadinventories.util.Util;
 
 import net.minecraft.ChatFormatting;
@@ -47,24 +47,24 @@ public class CommandLoadinventory {
 			player = source.getPlayerOrException();
 		}
 		catch (CommandSyntaxException ex) {
-			StringFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
 			return 1;
 		}
 		
 		String inventoryname = StringArgumentType.getString(command, "inventory-name").toLowerCase();
 		if (inventoryname.trim() == "") {
-			StringFunctions.sendMessage(source, "The inventory name '" + inventoryname + "' is invalid.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "The inventory name '" + inventoryname + "' is invalid.", ChatFormatting.RED);
 			return 0;
 		}
 		
 		String gearstring = Util.getGearStringFromFile(inventoryname);
 		if (gearstring == "") {
-			StringFunctions.sendMessage(source, "Unable to load the content of the inventory with the name '" + inventoryname + "'.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "Unable to load the content of the inventory with the name '" + inventoryname + "'.", ChatFormatting.RED);
 			return 0;					
 		}
 		
 		PlayerFunctions.setPlayerGearFromString(player, gearstring);
-		StringFunctions.sendMessage(source, "Successfully loaded '" + inventoryname + "' to your inventory.", ChatFormatting.DARK_GREEN);
+		MessageFunctions.sendMessage(source, "Successfully loaded '" + inventoryname + "' to your inventory.", ChatFormatting.DARK_GREEN);
 		return 1;
 	}
 	
@@ -76,32 +76,32 @@ public class CommandLoadinventory {
 			player = source.getPlayerOrException();
 		}
 		catch (CommandSyntaxException ex) {
-			StringFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
 			return 1;
 		}
 		
 		String inventoryname = StringArgumentType.getString(command, "inventory-name").toLowerCase();
 		if (inventoryname.trim() == "") {
-			StringFunctions.sendMessage(source, "The inventory name '" + inventoryname + "' is invalid.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "The inventory name '" + inventoryname + "' is invalid.", ChatFormatting.RED);
 			return 0;
 		}
 		
 		String targetname = StringArgumentType.getString(command, "player-name").toLowerCase();
 		Player target = PlayerFunctions.matchPlayer(player, targetname.toLowerCase());
 		if (target == null) {
-			StringFunctions.sendMessage(source, "Unable to find an online player with the name '" + targetname + "'.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "Unable to find an online player with the name '" + targetname + "'.", ChatFormatting.RED);
 			return 0;			
 		}
 		
 		String gearstring = Util.getGearStringFromFile(inventoryname);
 		if (gearstring == "") {
-			StringFunctions.sendMessage(source, "Unable to load the content of the inventory with the name '" + inventoryname + "'.", ChatFormatting.RED);
+			MessageFunctions.sendMessage(source, "Unable to load the content of the inventory with the name '" + inventoryname + "'.", ChatFormatting.RED);
 			return 0;					
 		}
 		
 		PlayerFunctions.setPlayerGearFromString(target, gearstring);
-		StringFunctions.sendMessage(source, "Successfully loaded '" + inventoryname + "' to the inventory of '" + target.getName().getString() + "'.", ChatFormatting.DARK_GREEN);
-		StringFunctions.sendMessage(target, "Your inventory has been replaced with the preset named '" + inventoryname + "'.", ChatFormatting.DARK_GREEN);
+		MessageFunctions.sendMessage(source, "Successfully loaded '" + inventoryname + "' to the inventory of '" + target.getName().getString() + "'.", ChatFormatting.DARK_GREEN);
+		MessageFunctions.sendMessage(target, "Your inventory has been replaced with the preset named '" + inventoryname + "'.", ChatFormatting.DARK_GREEN);
 		return 1;
 	}
 }

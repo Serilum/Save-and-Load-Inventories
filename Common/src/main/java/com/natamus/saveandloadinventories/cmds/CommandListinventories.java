@@ -1,7 +1,7 @@
 package com.natamus.saveandloadinventories.cmds;
 
 import com.mojang.brigadier.CommandDispatcher;
-import com.natamus.collective.functions.StringFunctions;
+import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.saveandloadinventories.util.Util;
 
 import net.minecraft.commands.CommandSourceStack;
@@ -14,7 +14,7 @@ public class CommandListinventories {
 			.executes((command) -> {
 				CommandSourceStack source = command.getSource();
 				
-				StringFunctions.sendMessage(source, "Saved inventories: " + Util.getListOfInventories() + ".", ChatFormatting.DARK_GREEN);
+				MessageFunctions.sendMessage(source, "Saved inventories: " + Util.getListOfInventories() + ".", ChatFormatting.DARK_GREEN);
 				return 1;
 			})
 		);
