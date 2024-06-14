@@ -1,0 +1,37 @@
+modLoader="javafml"
+loaderVersion="*"
+license="All rights reserved"
+issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Save%20and%20Load%20Inventories"
+logoFile="icon.png"
+
+[[mods]]
+modId="saveandloadinventories"
+version="3.3"
+displayName="Save and Load Inventories"
+displayURL="https://serilum.com/mod/save-and-load-inventories"
+authors="Rick South"
+description='''Easily save and load inventories by using commands.
+'''
+credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
+
+Alister, Andrean Olgo, aternosorg, BirdieMiner, Cherriesaurus, Jeremy Langford, Michael W. S., Rare Students, Shana Gitnick, Tyler Behl   
+
+If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+'''
+
+[[dependencies.saveandloadinventories]]
+    modId="collective"
+    type="required"
+    versionRange="[7.61,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.saveandloadinventories]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21]"
+    ordering="NONE"
+    side="BOTH"
+
+[[mixins]]
+    config = "saveandloadinventories.mixins.json"
