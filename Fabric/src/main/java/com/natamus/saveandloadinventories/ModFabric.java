@@ -1,6 +1,7 @@
 package com.natamus.saveandloadinventories;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.saveandloadinventories.cmds.CommandListinventories;
 import com.natamus.saveandloadinventories.cmds.CommandLoadinventory;
 import com.natamus.saveandloadinventories.cmds.CommandSaveinventory;
@@ -12,6 +13,10 @@ public class ModFabric implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		setGlobalConstants();
 		ModCommon.init();
 
