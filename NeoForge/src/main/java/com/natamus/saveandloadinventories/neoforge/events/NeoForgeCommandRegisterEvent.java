@@ -7,9 +7,7 @@ import com.natamus.saveandloadinventories.cmds.CommandSaveinventory;
 import net.minecraft.commands.CommandSourceStack;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 
-@EventBusSubscriber
 public class NeoForgeCommandRegisterEvent {
 	@SubscribeEvent
 	public static void registerCommands(RegisterCommandsEvent e) {
