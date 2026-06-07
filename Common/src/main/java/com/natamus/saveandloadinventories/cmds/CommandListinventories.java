@@ -14,7 +14,7 @@ public class CommandListinventories {
 			.executes((command) -> {
 				CommandSourceStack source = command.getSource();
 				
-				MessageFunctions.sendMessage(source, "Saved inventories: " + Util.getListOfInventories() + ".", ChatFormatting.DARK_GREEN);
+				MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.savedinventories", ChatFormatting.DARK_GREEN, Util.getListOfInventories());
 				return 1;
 			})
 		);
