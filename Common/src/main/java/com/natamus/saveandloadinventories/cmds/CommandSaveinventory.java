@@ -37,29 +37,29 @@ public class CommandSaveinventory {
 			player = source.getPlayerOrException();
 		}
 		catch (CommandSyntaxException ex) {
-			MessageFunctions.sendMessage(source, "This command can only be executed as a player in-game.", ChatFormatting.RED);
+			MessageFunctions.sendTranslatableMessage(source, "collective.shared.message.playeronly", ChatFormatting.RED);
 			return 1;
 		}
 		
 		String inventoryname = StringArgumentType.getString(command, "inventory-name").toLowerCase();
 		if (inventoryname.trim() == "") {
-			MessageFunctions.sendMessage(source, "The inventory name '" + inventoryname + "' is invalid.", ChatFormatting.RED);
+			MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.inventorynameinvalid", ChatFormatting.RED, inventoryname);
 			return 0;
 		}
 		
 		String gearstring = PlayerFunctions.getPlayerGearString(player);
 		if (StringFunctions.sequenceCount(gearstring, "\n") < 40) {
-			MessageFunctions.sendMessage(source, "Something went wrong while generating the save file content for your inventory.", ChatFormatting.RED);
+			MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.somethingwentwrongwhilegenerating", ChatFormatting.RED);
 			return 0;					
 		}
 		
 		if (!Util.writeGearStringToFile(inventoryname, gearstring)) {
-			MessageFunctions.sendMessage(source, "Something went wrong while saving the content of your inventory as '" + inventoryname + "'.", ChatFormatting.RED);
+			MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.somethingwentwrongwhile", ChatFormatting.RED, inventoryname);
 			return 0;							
 		}
 		
-		MessageFunctions.sendMessage(source, "Successfully saved your inventory as '" + inventoryname + "'.", ChatFormatting.DARK_GREEN);
-		MessageFunctions.sendMessage(source, "You can load it with the command '/loadinventory " + inventoryname + "'.", ChatFormatting.DARK_GREEN);
+		MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.successfullysavedinventory", ChatFormatting.DARK_GREEN, inventoryname);
+		MessageFunctions.sendTranslatableMessage(source, "collective.saveandloadinventories.message.loadcommandloadinventory", ChatFormatting.DARK_GREEN, inventoryname);
 		return 1;
 	}
 }
