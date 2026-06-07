@@ -1,5 +1,5 @@
 <h2>Save and Load Inventories</h2>
-<p><a href="https://github.com/Serilum/Save-and-Load-Inventories"><img src="https://serilum.com/assets/data/logo/save-and-load-inventories.png"></a></p><h2>Download</h2>
+<p><a href="https://github.com/Serilum/Save-and-Load-Inventories"><img src="https://serilum.com/assets/images/logo/save-and-load-inventories.png"></a></p><h2>Download</h2>
 <p>You can download Save and Load Inventories on CurseForge and Modrinth:</p><p>&nbsp;&nbsp;CurseForge: &nbsp;&nbsp;<a href="https://curseforge.com/minecraft/mc-mods/save-and-load-inventories">https://curseforge.com/minecraft/mc-mods/save-and-load-inventories</a><br>&nbsp;&nbsp;Modrinth: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://modrinth.com/mod/save-and-load-inventories">https://modrinth.com/mod/save-and-load-inventories</a></p>
 <h2>Issue Tracker</h2>
 <p>To keep a better overview of all mods, the issue tracker is located in a separate repository.<br>&nbsp;&nbsp;For issues, ideas, suggestions or anything else, please follow this link:</p>
