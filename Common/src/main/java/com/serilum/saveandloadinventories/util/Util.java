@@ -1,4 +1,4 @@
-package com.natamus.saveandloadinventories.util;
+package com.serilum.saveandloadinventories.util;
 
 import com.natamus.collective.functions.DataFunctions;
 

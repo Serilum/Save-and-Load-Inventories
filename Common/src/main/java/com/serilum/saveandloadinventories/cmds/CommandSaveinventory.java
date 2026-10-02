@@ -1,4 +1,4 @@
-package com.natamus.saveandloadinventories.cmds;
+package com.serilum.saveandloadinventories.cmds;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
@@ -7,7 +7,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.natamus.collective.functions.MessageFunctions;
 import com.natamus.collective.functions.PlayerFunctions;
 import com.natamus.collective.functions.StringFunctions;
-import com.natamus.saveandloadinventories.util.Util;
+import com.serilum.saveandloadinventories.util.Util;
 import net.minecraft.ChatFormatting;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
