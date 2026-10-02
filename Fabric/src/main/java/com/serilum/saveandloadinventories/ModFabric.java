@@ -1,11 +1,11 @@
-package com.natamus.saveandloadinventories;
+package com.serilum.saveandloadinventories;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.saveandloadinventories.cmds.CommandListinventories;
-import com.natamus.saveandloadinventories.cmds.CommandLoadinventory;
-import com.natamus.saveandloadinventories.cmds.CommandSaveinventory;
-import com.natamus.saveandloadinventories.util.Reference;
+import com.serilum.saveandloadinventories.cmds.CommandListinventories;
+import com.serilum.saveandloadinventories.cmds.CommandLoadinventory;
+import com.serilum.saveandloadinventories.cmds.CommandSaveinventory;
+import com.serilum.saveandloadinventories.util.Reference;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 

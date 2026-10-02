@@ -1,9 +1,9 @@
-package com.natamus.saveandloadinventories.neoforge.events;
+package com.serilum.saveandloadinventories.neoforge.events;
 
 import com.mojang.brigadier.CommandDispatcher;
-import com.natamus.saveandloadinventories.cmds.CommandListinventories;
-import com.natamus.saveandloadinventories.cmds.CommandLoadinventory;
-import com.natamus.saveandloadinventories.cmds.CommandSaveinventory;
+import com.serilum.saveandloadinventories.cmds.CommandListinventories;
+import com.serilum.saveandloadinventories.cmds.CommandLoadinventory;
+import com.serilum.saveandloadinventories.cmds.CommandSaveinventory;
 import net.minecraft.commands.CommandSourceStack;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.bus.api.SubscribeEvent;

@@ -1,4 +1,4 @@
-package com.natamus.saveandloadinventories;
+package com.serilum.saveandloadinventories;
 
 
 public class ModCommon {
