@@ -1,9 +1,9 @@
-package com.natamus.saveandloadinventories;
+package com.serilum.saveandloadinventories;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.saveandloadinventories.forge.events.ForgeCommandRegisterEvent;
-import com.natamus.saveandloadinventories.util.Reference;
+import com.serilum.saveandloadinventories.forge.events.ForgeCommandRegisterEvent;
+import com.serilum.saveandloadinventories.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
