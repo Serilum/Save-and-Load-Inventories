@@ -1,8 +1,8 @@
-package com.natamus.saveandloadinventories.cmds;
+package com.serilum.saveandloadinventories.cmds;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.natamus.collective.functions.MessageFunctions;
-import com.natamus.saveandloadinventories.util.Util;
+import com.serilum.saveandloadinventories.util.Util;
 
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;

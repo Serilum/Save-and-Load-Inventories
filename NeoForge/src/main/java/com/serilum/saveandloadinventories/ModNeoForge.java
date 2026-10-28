@@ -1,9 +1,9 @@
-package com.natamus.saveandloadinventories;
+package com.serilum.saveandloadinventories;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
-import com.natamus.saveandloadinventories.neoforge.events.NeoForgeCommandRegisterEvent;
-import com.natamus.saveandloadinventories.util.Reference;
+import com.serilum.saveandloadinventories.neoforge.events.NeoForgeCommandRegisterEvent;
+import com.serilum.saveandloadinventories.util.Reference;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
